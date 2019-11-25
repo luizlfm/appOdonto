@@ -1,0 +1,196 @@
+<ion-header color="primary">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="getPreviousUrl()"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ getTitle() }}</ion-title>
+    <ion-buttons slot="end" class="icon-salvar" size="3">
+      <ion-button
+        ><ion-img src="/assets/icon/icon-salvar.png"></ion-img></ion-button
+    ></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-item-divider class="item-divider-info">
+        <ion-icon slot="start" name="contact"></ion-icon>
+        <ion-label text-left>
+          Agenda de Horários
+        </ion-label>
+      </ion-item-divider>
+      <ion-split-pane when="(min-width: 20px)"></ion-split-pane>
+      <br />
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label type="date" position="stacked">Tipo de Plano</ion-label>
+            <ion-select
+              placeholder="Selecione seu plano"
+              okText="Confirmar"
+              cancelText="Cancelar"
+              [(ngModel)]="selectedDocumentType"
+            >
+              <ion-select-option [value]="documentTypeOptions.convenio">
+                Convênio
+              </ion-select-option>
+              <ion-select-option [value]="documentTypeOptions.particular">
+                Particular
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col
+          size="12"
+          *ngIf="documentTypeOptions.convenio === selectedDocumentType"
+        >
+          <ion-item-divider class="item-divider-info">
+            <ion-icon slot="start" name="person"></ion-icon>
+            <ion-label text-left>
+              Convênio
+            </ion-label>
+          </ion-item-divider>
+
+          <form size="12">
+            <ion-col size="12">
+              <ion-item>
+                <ion-label type="date" position="stacked">Dentista</ion-label>
+                <ion-select placeholder="Selecione seu dentista">
+                  <ion-select-option [value]="dentistaConvenioOptions.paulo"
+                    >Dr. Paulo</ion-select-option
+                  >
+                  <ion-select-option [value]="dentistaConvenioOptions.renata"
+                    >Dra. Renata</ion-select-option
+                  >
+                </ion-select>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="stacked">Serviços</ion-label>
+                <ion-select
+                  okText="Confirmar"
+                  cancelText="Cancelar"
+                  placeholder="Selecione seu dentista"
+                >
+                  <ion-select-option [value]="documentService.limpeza"
+                    >LIMPEZA</ion-select-option
+                  >
+
+                  <ion-select-option [value]="documentService.canal"
+                    >TRAT. CANAL</ion-select-option
+                  >
+                  <ion-select-option [value]="documentService.fluor"
+                    >FLUOR - SELANTE</ion-select-option
+                  >
+                  <ion-select-option [value]="documentService.pivots"
+                    >PIVÔTS</ion-select-option
+                  >
+                  <ion-select-option [value]="documentService.estracao"
+                    >ESTRAÇÃO</ion-select-option
+                  >
+                </ion-select>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label type="date" position="stacked"
+                  >Data Início</ion-label
+                >
+                <ion-input type="date"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label type="date" position="stacked">Data Fim</ion-label>
+                <ion-input type="date"></ion-input>
+              </ion-item>
+            </ion-col>
+          </form>
+        </ion-col>
+        <ion-col
+          size="12"
+          *ngIf="documentTypeOptions.particular === selectedDocumentType"
+        >
+          <ion-item-divider class="item-divider-info">
+            <ion-icon slot="start" name="person"></ion-icon>
+            <ion-label text-left>
+              Particular
+            </ion-label>
+          </ion-item-divider>
+
+          <form size="12">
+            <ion-col size="12">
+              <ion-item>
+                <ion-label type="date" position="stacked">Dentista</ion-label>
+                <ion-select placeholder="Selecione seu dentista">
+                  <ion-select-option
+                    [value]="dentistaParticularOptions.mariaEduarda"
+                    >Dra. Maria Eduarda</ion-select-option
+                  >
+                  <ion-select-option [value]="dentistaParticularOptions.diego"
+                    >Dr. Diego</ion-select-option
+                  >
+                </ion-select>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="stacked">Serviços</ion-label>
+                <ion-select
+                  okText="Confirmar"
+                  cancelText="Cancelar"
+                  placeholder="Selecione seu dentista"
+                >
+                  <ion-select-option [value]="documentService.limpeza"
+                    >LIMPEZA</ion-select-option
+                  >
+
+                  <ion-select-option [value]="documentService.canal"
+                    >TRAT. CANAL</ion-select-option
+                  >
+                  <ion-select-option [value]="documentService.fluor"
+                    >FLUOR - SELANTE</ion-select-option
+                  >
+                  <ion-select-option [value]="documentService.pivots"
+                    >PIVÔTS</ion-select-option
+                  >
+                  <ion-select-option [value]="documentService.estracao"
+                    >ESTRAÇÃO</ion-select-option
+                  >
+                </ion-select>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label type="date" position="stacked"
+                  >Data Início</ion-label
+                >
+                <ion-input type="date"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label type="date" position="stacked">Data Fim</ion-label>
+                <ion-input type="date"></ion-input>
+              </ion-item>
+            </ion-col>
+          </form>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <calendar
+      [eventSource]="eventSource"
+      [calendarMode]="calendar.mode"
+      [currentDate]="calendar.currentDate"
+      (onCurrentDateChanged)="onCurrentDateChanged($event)"
+      (onEventSelected)="onEventSelected($event)"
+      (onTitleChanged)="onViewTitleChanged($event)"
+      (onTimeSelected)="onTimeSelected($event)"
+      step="30"
+    >
+    </calendar>
+  </div>
+</ion-content>

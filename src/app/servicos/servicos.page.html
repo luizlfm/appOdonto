@@ -1,0 +1,177 @@
+<ion-header color="primary">
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button [defaultHref]="getPreviousUrl()">
+          </ion-back-button>
+        </ion-buttons> 
+        <ion-title>{{ getTitle() }}</ion-title>
+        <ion-buttons slot="end"></ion-buttons>
+      </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+
+    <ion-row class="dicasContent ">
+      <ion-col size="12" >
+          <ion-img src="/assets/servicos.png"></ion-img>
+      </ion-col>
+     
+    </ion-row>
+    <div class="subMenu">  
+      <ion-label >Conheça nosso serviços</ion-label>
+      <ion-row ></ion-row> 
+    </div>
+
+
+  <ion-list>
+      <ion-item class="btn-servicos">
+          <ion-icon name="pulse" slot="start"></ion-icon>
+         <ion-label class="font-item" >
+            <h2> ESTRAÇÃO</h2>
+            
+          </ion-label>
+          <ion-row class="linha"></ion-row>
+        </ion-item>
+        <ion-item class="btn-servicos">
+            <ion-icon name="pulse" slot="start"></ion-icon>
+           <ion-label class="font-item" >
+              <h2> LIMPEZA</h2>
+              
+            </ion-label>
+            <ion-row class="linha"></ion-row>
+          </ion-item>
+          <ion-item class="btn-servicos">
+              <ion-icon name="pulse" slot="start"></ion-icon>
+             <ion-label class="font-item" >
+                <h2> OBT. AMALGANA</h2>
+                
+              </ion-label>
+              <ion-row class="linha"></ion-row>
+            </ion-item>
+            <ion-item class="btn-servicos">
+                <ion-icon name="pulse" slot="start"></ion-icon>
+               <ion-label class="font-item" >
+                  <h2>OBT. LUZ HALOGÊNIA</h2>
+                  
+                </ion-label>
+                <ion-row class="linha"></ion-row>
+              </ion-item>
+              <ion-item class="btn-servicos">
+                  <ion-icon name="pulse" slot="start"></ion-icon>
+                 <ion-label class="font-item" >
+                    <h2>REM. DE TARTARO</h2>
+                    
+                  </ion-label>
+                  <ion-row class="linha"></ion-row>
+                </ion-item>
+    
+  </ion-list> 
+    <!-- <ion-row>
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">ESTRAÇÃO</ion-col>
+
+    </ion-row>
+    <ion-row class="row-service">
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">LIMPEZA</ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">OBT. AMALGANA</ion-col>
+
+    </ion-row>
+    <ion-row class="row-service">
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">OBT. LUZ HALOGÊNIA</ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">TRAT. CANAL</ion-col>
+
+    </ion-row>
+    <ion-row class="row-service">
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">REM. DE TARTARO</ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">FLUOR - SELANTE</ion-col>
+
+    </ion-row>
+    <ion-row class="row-service">
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">PIVÔTS</ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">BLOCOS</ion-col>
+
+    </ion-row>
+    <ion-row class="row-service">
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">PONTE MOVÉL</ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">PONTE DE GRAMPO </ion-col>
+
+    </ion-row>
+    <ion-row class="row-service">
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">DENTE INFERIOR</ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">DENTE SUPERIOR</ion-col>
+
+    </ion-row>
+
+    <ion-row class="row-service">
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">CLAREAMENTO</ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+        <ion-icon class="icon-service" name="pulse"></ion-icon>
+      </ion-col>
+      <ion-col size="9" class="font-service">CONCERTOS</ion-col>
+
+    </ion-row> -->
+  
+
+</ion-content>

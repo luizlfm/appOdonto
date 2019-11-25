@@ -1,0 +1,177 @@
+.img-fundo {
+  background-image: url('/assets/fundo.png') no-repeat center center / cover;
+}
+
+.img-dra {
+  width: 100%;
+  height: 100%;
+
+}
+
+.header {
+  width: 100%;
+  height: 20px;
+  background: #5CB0E0;
+  position: relative;
+}
+
+.cabecalho1 {
+
+
+  width: auto;
+  height: auto;
+
+}
+
+.cabecalho {
+  background-image: url(/assets/fundo.png);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: auto;
+
+}
+
+.ajus-fab-loc {
+  width: 300px;
+}
+
+.footer {
+  height: 20px;
+  background: #0075BA;
+
+}
+
+.titulo {
+  margin-top: 30px;
+}
+
+.logo {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 80%;
+
+}
+
+.primary-grid {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+
+  background: #002F67;
+}
+
+.second-grid {
+  width: 100%;
+  height: 100%;
+  background: #0075BA;
+
+}
+
+.third-grid {
+  width: 100%;
+  height: 100%;
+  background: #5CB0E0;
+
+}
+
+.icon-chat {
+  width: 30px;
+  height: 30px;
+}
+
+.date {
+  width: 100%;
+  height: 100px;
+  background: #002F67;
+}
+
+.borda {
+  padding: 1px;
+}
+
+.borda2 {
+  padding: 0px 5px 0px 0px;
+}
+
+.conteudo {
+  padding: 10px;
+}
+
+.date-day {
+  text-align: center;
+  padding: 5px 0 5px 0;
+}
+
+.txt-today {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+}
+
+.txt-day {
+  color: #fff;
+  font-size: 30px;
+  margin: 10px;
+
+}
+
+.txt-month {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+
+}
+
+.pad-date {
+  padding: 0px;
+}
+
+.txt-consult {
+  color: #fff;
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+}
+
+.txt-date-consult {
+  color: #fff;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+
+}
+
+.txt-texto {
+  color: #fff;
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+
+}
+
+.btn-home {
+  padding: 5px;
+}
+
+.icon-btn {
+  width: 60%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.sub-btn {
+  margin: 0px;
+  color: #fff;
+  font-size: 18px;
+
+}
+
+.rodape {
+  margin-top: 30px;
+}

@@ -1,0 +1,720 @@
+<ion-header color="primary">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="getPreviousUrl()"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ getTitle() }}</ion-title>
+    <ion-buttons slot="end"></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-segment
+      color="success"
+      [(ngModel)]="category"
+      (ionChange)="segmentChanged($event)"
+    >
+      <ion-segment-button value="cad1" checked>
+        <ion-label>1</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="cad2">
+        2
+      </ion-segment-button>
+      <ion-segment-button value="cad3">
+        3
+      </ion-segment-button>
+      <ion-segment-button value="cad4">
+        4
+      </ion-segment-button>
+      <ion-segment-button value="cad5">
+        5
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <ion-slides
+    #slides
+    (ionSlideDidChange)="slideChanged()"
+    style="display: block"
+    scrollbar="true"
+    [ngSwitch]="category"
+    checked
+  >
+    <!-- Slide 1 -->
+    <ion-slide pager="false" *ngSwitchCase="'cad1'">
+      <ion-grid>
+        <div class="avatarImg">
+          <ion-avatar>
+            <img src="/assets/dra1.png" />
+          </ion-avatar>
+        </div>
+        <ion-row padding>
+          <ion-col size="12">
+            <form size="12">
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked">Nome</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked">Sobrenome</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked"
+                    >Como deseja ser chamado?</ion-label
+                  >
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </form>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col> </ion-col>
+          <ion-col>
+            <ion-button
+              class="button-register"
+              expand="block"
+              size="small"
+              color="primary"
+              margin-top
+              (click)="next()"
+              (click)="segmentChanged2()"
+              (click)="ScrollToTop()"
+              >Próximo
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <!-- Slide 2 -->
+    <ion-slide pager="false" *ngSwitchCase="'cad2'">
+      <ion-grid>
+        <ion-row padding>
+          <ion-col size="12">
+            <form size="12">
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked"
+                    >Data de Nascimento</ion-label
+                  >
+                  <ion-input type="date"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked">CPF</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked"
+                    >Qual seu sexo?</ion-label
+                  >
+                  <ion-select multiple="true">
+                    <ion-select-option value="bird"
+                      >Masculino</ion-select-option
+                    >
+                    <ion-select-option value="dog">Feminino</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked">Email</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </form>
+          </ion-col>
+        </ion-row>
+        <ion-row class="button-register">
+          <ion-col
+            ><ion-button
+              expand="block"
+              size="small"
+              color="primary"
+              margin-top
+              (click)="prev()"
+              (click)="segmentChanged1()"
+              (click)="ScrollToTop()"
+              >Voltar
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button
+              expand="block"
+              size="small"
+              color="primary"
+              margin-top
+              (click)="next()"
+              (click)="segmentChanged3()"
+              (click)="ScrollToTop()"
+              >Próximo
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <!-- Slide 3 -->
+    <ion-slide pager="false" *ngSwitchCase="'cad3'">
+      <ion-grid>
+        <ion-row padding>
+          <ion-col size="12">
+            <form size="12">
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked">Telefone</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked">CEP</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked">Endereço</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked">Número</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked">Bairro</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked">Estado</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </form>
+          </ion-col>
+        </ion-row>
+        <ion-row class="button-register">
+          <ion-col
+            ><ion-button
+              expand="block"
+              size="small"
+              color="primary"
+              margin-top
+              (click)="prev()"
+              (click)="segmentChanged2()"
+              (click)="ScrollToTop()"
+              >Próximo
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button
+              expand="block"
+              size="small"
+              color="primary"
+              margin-top
+              (click)="next()"
+              (click)="segmentChanged4()"
+              (click)="ScrollToTop()"
+              >Próximo
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <!-- Slide 4 -->
+    <ion-slide pager="false" *ngSwitchCase="'cad4'">
+      <ion-grid>
+        <ion-row padding>
+          <ion-col size="12">
+            <form size="12">
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked"
+                    >Qual o tipo de atendimento?</ion-label
+                  >
+                  <ion-select multiple="true">
+                    <ion-select-option value="bird"
+                      >Particular</ion-select-option
+                    >
+                    <ion-select-option value="dog">Convênio</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-label type="tel" position="stacked"
+                    >Como ficou sabendo da clínica</ion-label
+                  >
+                  <ion-select multiple="true">
+                    <ion-select-option value="bird"
+                      >Masculino</ion-select-option
+                    >
+                    <ion-select-option value="dog">Feminino</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+            </form>
+          </ion-col>
+        </ion-row>
+        <ion-row class="button-register">
+          <ion-col
+            ><ion-button
+              expand="block"
+              size="small"
+              color="primary"
+              margin-top
+              (click)="prev()"
+              (click)="segmentChanged3()"
+              (click)="ScrollToTop()"
+              >Próximo
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button
+              expand="block"
+              size="small"
+              color="primary"
+              margin-top
+              (click)="next()"
+              (click)="segmentChanged5()"
+              (click)="ScrollToTop()"
+              >Próximo
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <!-- Slide 5 -->
+    <ion-slide pager="false" *ngSwitchCase="'cad5'">
+      <ion-grid>
+        <ion-item-divider class="item-divider-info">
+          <ion-icon slot="start" name="contact"></ion-icon>
+          <ion-label text-left>
+            Informações Basícas
+          </ion-label>
+        </ion-item-divider>
+        <ion-row padding>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel"
+                >Qual ultima vez que foi ao dentista?</ion-label
+              >
+              <ion-col size="12">
+                <ion-item>
+                  <ion-input placeholder="" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel"
+                >Usa fio dental?</ion-label
+              >
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel"
+                >Toma algum medicamento?</ion-label
+              >
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel"
+                >Possui alergia com algum medicamento?</ion-label
+              >
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel"
+                >Possui alergia com algum medicamento?</ion-label
+              >
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel"
+                >Tem pressão alta?</ion-label
+              >
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel"
+                >Possui Diabetes?</ion-label
+              >
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel">Possui asma?</ion-label>
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel"
+                >Possui alguma disfunção no figado ou rin?</ion-label
+              >
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel"
+                >Já fez alguma cirurgia?</ion-label
+              >
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel">Fuma ou Bebe?</ion-label>
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12">
+            <ion-row>
+              <ion-label class="txt-quest" type="tel"
+                >Come muito doce?</ion-label
+              >
+
+              <ion-col size="3">
+                <ion-select multiple="true" class="selector">
+                  <ion-select-option value="bird">Sim</ion-select-option>
+                  <ion-select-option value="dog">Não</ion-select-option>
+                </ion-select>
+              </ion-col>
+
+              <ion-col size="9">
+                <ion-item>
+                  <ion-input placeholder="Qual?" type="text"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row class="button-register">
+          <ion-col
+            ><ion-button
+              expand="block"
+              size="small"
+              color="primary"
+              margin-top
+              (click)="prev()"
+              (click)="segmentChanged4()"
+              (click)="ScrollToTop()"
+              >Voltar
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button
+              expand="block"
+              size="small"
+              color="primary"
+              margin-top
+              (click)="next()"
+              (click)="ScrollToTop()"
+              >Finalizar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<!-- <div class="segment-1">
+    <ion-segment class="tab-bar1" color="success" [(ngModel)]="yudsgmente">
+      <ion-segment-button value="cad1">
+        <ion-label>1</ion-label>
+
+      </ion-segment-button>
+      <ion-segment-button value="cad2">
+        2
+      </ion-segment-button>
+      <ion-segment-button value="cad3">
+        3
+      </ion-segment-button>
+      <ion-segment-button value="cad4">
+        4
+      </ion-segment-button>
+      <ion-segment-button value="cad5">
+        5
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="conteudo1" [ngSwitch]="yudsgmente">
+    <ion-list *ngSwitchCase="'cad1'" ngSelected="selected">
+
+      <ion-item class="login">
+        <ion-input type="text" placeholder="Email ou CPF"> </ion-input>
+        [(ngModel)]="userLogin.email"
+      </ion-item>
+
+      <ion-item class="login">
+
+        <ion-input [type]="tipo ? 'text' : 'password'" placeholder="Senha">
+          [(ngModel)]="userLogin.password"
+        </ion-input>
+
+
+
+      </ion-item>
+
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'cad2'">
+
+      <ion-item class="login">
+        <ion-input type="text" placeholder="Nome" [(ngModel)]="userRegistro.nome"></ion-input>
+      </ion-item>
+
+      <ion-item class="login">
+        <ion-input type="text" placeholder="Sobrenome" [(ngModel)]="userRegistro.sobrenome"></ion-input>
+      </ion-item>
+
+      <ion-item class="login">
+        <ion-input type="text" placeholder="Email" [(ngModel)]="userRegistro.email"></ion-input>
+      </ion-item>
+
+      <ion-item class="login">
+
+        <ion-input [type]="tipo ? 'text' : 'password'" placeholder="Senha" [(ngModel)]="userRegistro.password">
+        </ion-input>
+
+        <button (click)="ExibirOcultar()" ion-button item-right>
+
+          <ion-icon [name]="tipo ? 'ios-eye-off' : 'eye'"></ion-icon>
+        </button>
+      </ion-item>
+
+      
+
+    </ion-list>
+    <ion-list *ngSwitchCase="'cad3'">
+     
+      <ion-item class="login">
+        <ion-input type="text" placeholder="Data de Nascimento?" [(ngModel)]="userRegistro.data-nas"></ion-input>
+      </ion-item>
+
+      <ion-item class="login">
+        <ion-input type="text" placeholder="Seu CPF" [(ngModel)]="userRegistro.cpf"></ion-input>
+      </ion-item>
+
+      <ion-item class="login">
+        <ion-input type="text" placeholder="Sexo?" [(ngModel)]="userRegistro.sexo"></ion-input>
+      </ion-item>
+
+      <ion-item class="login">
+
+        <ion-input [type]="tipo ? 'text' : 'password'" placeholder="Senha" [(ngModel)]="userRegistro.password">
+        </ion-input>
+
+        <button (click)="ExibirOcultar()" ion-button item-right>
+
+          <ion-icon [name]="tipo ? 'ios-eye-off' : 'eye'"></ion-icon>
+        </button>
+
+      </ion-item>
+
+     
+    </ion-list>
+    <ion-list *ngSwitchCase="'cad4'">
+        <ion-item class="login">
+            <ion-input type="text" placeholder="Teste" [(ngModel)]="userRegistro.data-nas"></ion-input>
+          </ion-item>
+    
+          <ion-item class="login">
+            <ion-input type="text" placeholder="Seu CPF" [(ngModel)]="userRegistro.cpf"></ion-input>
+          </ion-item>
+    
+          <ion-item class="login">
+            <ion-input type="text" placeholder="Sexo?" [(ngModel)]="userRegistro.sexo"></ion-input>
+          </ion-item>
+    
+          <ion-item class="login">
+    
+            <ion-input [type]="tipo ? 'text' : 'password'" placeholder="Senha" [(ngModel)]="userRegistro.password">
+            </ion-input>
+    
+            <button (click)="ExibirOcultar()" ion-button item-right>
+    
+              <ion-icon [name]="tipo ? 'ios-eye-off' : 'eye'"></ion-icon>
+            </button>
+    
+          </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'cad5'">
+        <ion-item class="login">
+            <ion-input type="text" placeholder="Teste2" [(ngModel)]="userRegistro.data-nas"></ion-input>
+          </ion-item>
+    
+          <ion-item class="login">
+            <ion-input type="text" placeholder="Seu CPF" [(ngModel)]="userRegistro.cpf"></ion-input>
+          </ion-item>
+    
+          <ion-item class="login">
+            <ion-input type="text" placeholder="Sexo?" [(ngModel)]="userRegistro.sexo"></ion-input>
+          </ion-item>
+    
+          <ion-item class="login">
+    
+            <ion-input [type]="tipo ? 'text' : 'password'" placeholder="Senha" [(ngModel)]="userRegistro.password">
+            </ion-input>
+    
+            <button (click)="ExibirOcultar()" ion-button item-right>
+    
+              <ion-icon [name]="tipo ? 'ios-eye-off' : 'eye'"></ion-icon>
+            </button>
+    
+          </ion-item>
+    </ion-list>
+
+  </div> -->

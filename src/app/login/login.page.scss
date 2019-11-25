@@ -1,0 +1,69 @@
+.logo{
+    margin-top: 60px;
+    padding: 5%;
+}
+
+.conteudo{
+    margin-top: 15% ;
+   
+}
+.conteudologin{
+    margin-top: 60px;
+    
+}
+.login{
+    margin-top: 10px;
+    --padding-start: 0px;
+}
+.loginpassword{
+    margin-top: 10px;   
+}
+.btn-entrar{
+    margin-top: 30px;
+}
+.btn-cadastrar{
+    text-align: center;
+    margin-top: 30p
+    
+}
+.btn-cadastrar p{
+    color: #EDA0A0;   
+}
+.btn-recuperar{
+    text-align: center;
+    margin-top:70px;
+}
+.btn-recuperar p{
+    color: #818181;   
+}
+.btn-recuperar a{
+    color: #EDA0A0;  
+     
+}
+.cadastra{
+    margin-top: 20px;
+    color: #EDA0A0;
+
+}
+.container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 20px;
+    
+   
+}
+.slide{
+    --background: transparent;
+    --background-hover: rgba(var(--ion-color-secondary-rgb,12,209,232),0.1);
+    --background-activated: rgba(var(--ion-color-secondary-rgb,12,209,232),0.16);
+    --background-checked: var(--ion-color-secondary,#0cd1e8);
+    --color: var(--ion-color-secondary,#0cd1e8);
+    --color-checked: var(--ion-color-secondary-contrast,#fff);
+    --color-disabled: rgba(var(--ion-color-secondary-rgb,12,209,232),0.3);
+    --color-checked-disabled: rgba(var(--ion-color-secondary-contrast-rgb,255,255,255),0.3);
+    --border-color: var(--ion-color-secondary,#0cd1e8);
+    --indicator-color: transparent;
+}

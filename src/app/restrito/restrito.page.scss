@@ -1,0 +1,108 @@
+.logo{
+    margin-top: 30px;
+    padding: 5%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.conteudo{
+    margin-top: 15% ;
+   
+}
+.conteudologin{
+    margin-top: 60px;
+    
+}
+.login{
+    margin-top: 10px;
+    --padding-start: 0px;
+}
+.loginpassword{
+    margin-top: 10px;   
+}
+.btn-entrar{
+    margin-top: 30px;
+}
+.btn-cadastrar{
+    text-align: center;
+    margin-top: 30p
+    
+}
+.btn-cadastrar p{
+    color: #EDA0A0;   
+}
+.btn-recuperar{
+    text-align: center;
+    margin-top:70px;
+}
+.btn-recuperar p{
+    color: #818181;   
+}
+.btn-recuperar a{
+    color: #EDA0A0;  
+     
+}
+.cadastra{
+    margin-top: 20px;
+    color: #EDA0A0;
+
+}
+.container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 20px;
+    
+   
+}
+.header{
+    width: 100%;
+    height: 70px;
+    color: #fff;
+    background: #5CB0E0;
+    text-align: center;
+  }
+  .grid1{
+    width: 100%;
+    height: 100%;
+  }
+  .txt-cab{
+    
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .txt-cab1{
+    
+    margin-top: 10px;
+  
+  }
+  .icon-size{
+    height: 50px;
+    width: 50px;
+  }
+  .header1 {
+    width:100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+  }
+.slide{
+    --background: transparent;
+    --background-hover: rgba(var(--ion-color-secondary-rgb,12,209,232),0.1);
+    --background-activated: rgba(var(--ion-color-secondary-rgb,12,209,232),0.16);
+    --background-checked: var(--ion-color-secondary,#0cd1e8);
+    --color: var(--ion-color-secondary,#0cd1e8);
+    --color-checked: var(--ion-color-secondary-contrast,#fff);
+    --color-disabled: rgba(var(--ion-color-secondary-rgb,12,209,232),0.3);
+    --color-checked-disabled: rgba(var(--ion-color-secondary-contrast-rgb,255,255,255),0.3);
+    --border-color: var(--ion-color-secondary,#0cd1e8);
+    --indicator-color: transparent;
+}

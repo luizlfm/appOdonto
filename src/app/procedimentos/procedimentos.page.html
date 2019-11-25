@@ -1,0 +1,55 @@
+<ion-header color="primary">
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button [defaultHref]="getPreviousUrl()">
+          </ion-back-button>
+        </ion-buttons> 
+        <ion-title>{{ getTitle() }}</ion-title>
+        <ion-buttons slot="end"></ion-buttons>
+      </ion-toolbar>
+</ion-header> 
+ 
+<ion-content>
+    <ion-row class="dicasContent ">
+        <ion-label class="borda">
+              <ion-img class="img-dra" src="/assets/fundo-orcamento.png"></ion-img>
+          </ion-label>
+       
+      </ion-row>
+  
+  <ion-list>
+    
+    <ion-grid>
+      <ion-row class="sub-orcamento">
+        <ion-col size="2">Dente</ion-col>
+        <ion-col size="7">Procedimento</ion-col>
+        <ion-col size="3">Data </ion-col>
+
+      </ion-row>
+
+    </ion-grid>
+    <ion-grid>
+      <ion-row class="item-orcamento">
+        <ion-col size="2">26 </ion-col>
+        <ion-col size="7">Restauração</ion-col>
+        <ion-col size="3">15/08/19 </ion-col>
+      </ion-row>
+      <br>
+      <ion-row class="item-orcamento">
+        <ion-col size="2">Todos</ion-col>
+        <ion-col size="7">Limpeza Completa</ion-col>
+        <ion-col size="3">15/08/19 </ion-col>
+      </ion-row>
+      <br>
+      <ion-row class="item-orcamento">
+        <ion-col size="2">Todos </ion-col>
+        <ion-col size="7">Fluor Geral</ion-col>
+        <ion-col size="3">15/08/19 </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+    
+
+  </ion-list>
+
+</ion-content>

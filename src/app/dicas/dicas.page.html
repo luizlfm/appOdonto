@@ -1,0 +1,48 @@
+<ion-header color="primary">
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button [defaultHref]="getPreviousUrl()">
+          </ion-back-button>
+        </ion-buttons> 
+        <ion-title>{{ getTitle() }}</ion-title>
+        <ion-buttons slot="end"></ion-buttons>
+      </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+
+        <ion-row class="dicasContent ">
+          <ion-col size="12" >
+              <ion-img src="/assets/dicas.png"></ion-img>
+          </ion-col>
+         
+        </ion-row>
+        <div class="subMenu">  
+          <ion-label >Conheça algumas dicas de saúde</ion-label>
+          <ion-row ></ion-row> 
+        </div>
+      
+        <ion-list>
+            <ion-item>
+                <ion-avatar class="avatar-list" slot="start">
+                  <img src="/assets/images.jpg">
+                </ion-avatar>
+                <ion-label class="font-item">
+                  <h2> Limpeza diaria com fio dental</h2>
+                  <h4>6/05/2019 - Dr. Hellio</h4>
+                  <p>Conheça algumas dicas de saúde. Conheça algumas dicas <br> de saúde Conheça algumas dicas de saúde..</p>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-avatar class="avatar-list" slot="start">
+                    <img src="/assets/images.jpg">
+                  </ion-avatar>
+                  <ion-label class="font-item">
+                    <h2> Limpeza diaria com fio dental</h2>
+                    <h4>6/05/2019 - Dr. Hellio</h4>
+                    <p>Conheça algumas dicas de saúde. Conheça algumas dicas <br> de saúde Conheça algumas dicas de saúde..</p>
+                  </ion-label>
+                </ion-item>
+        </ion-list>
+ 
+</ion-content>

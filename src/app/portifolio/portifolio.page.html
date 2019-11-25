@@ -1,0 +1,32 @@
+<ion-header color="primary">
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button [defaultHref]="getPreviousUrl()">
+          </ion-back-button>
+        </ion-buttons> 
+        <ion-title>{{ getTitle() }}</ion-title>
+        <ion-buttons slot="end"></ion-buttons>
+      </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+  <div  class="avatarImg">
+      <ion-avatar>
+          <img src="/assets/dra1.png">
+        </ion-avatar>
+  </div>
+  
+  <ion-list>
+    <ion-item color="primary">
+      Dra. Letícia Gabriela Menezes 
+    </ion-item>
+    <ion-item padding>
+        Cirurgiã Dentista <br><br>
+        Formada pela universidade UTI - Itáuna<br><br>
+        23 anos <br><br>
+        Solteira <br><br>
+        Arcos/MG  -  Ouro Branco/MG<br><br>
+      </ion-item>
+  </ion-list>
+
+</ion-content>

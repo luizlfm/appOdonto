@@ -1,0 +1,38 @@
+.dicasContent{
+  height: 180px;
+}
+.subMenu{
+  ion-label{
+    padding: 5px;
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    color: #002F67;
+
+  }
+    ion-row{
+      width: 90%;
+      height: 4px !important;
+      background: #5CB0E0 ;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+  
+}
+.avatar-list{
+  height: 70px;
+  width: 70px;
+}
+.font-item{
+  
+  h2 {
+  font-size: 20px;;
+  }
+  h4{
+    margin-bottom: 4px;
+  }
+  p{
+    
+  }
+
+}

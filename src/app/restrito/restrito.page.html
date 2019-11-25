@@ -1,0 +1,68 @@
+<ion-header class="header ">
+
+
+  <ion-grid class="grid1">
+    <ion-row>
+      <ion-col size="2" class="txt-cab1">
+
+        <ion-icon class="icon-size" name="arrow-round-back" (click)="voltar()"></ion-icon>
+      </ion-col>
+      <ion-col size="8" class="txt-cab">
+        <ion-text>Acesso Restrito</ion-text>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-header>
+<ion-content paddding class="swiper-no-swiping ">
+
+  <ion-img class="logo" src="/assets/acessorestrito.png"></ion-img>
+
+
+  <div class="container ">
+    <ion-segment (ionChange)="segmentChanged($event)" value="login">
+      <ion-segment-button class="slide" value="login">
+        <ion-label>Login</ion-label>
+      </ion-segment-button>
+      
+    </ion-segment>
+  </div>
+  <div class="conteudo">
+    <ion-slides class="login">
+      <ion-slide class="slide-inner ion-padding">
+        <ion-list>
+          <ion-item class="login">
+            <ion-input type="text" placeholder="Email ou CPF" [(ngModel)]="userLogin.email"> </ion-input>
+          </ion-item>
+
+          <ion-item class="login">
+
+            <ion-input [type]="tipo ? 'text' : 'password'" placeholder="Senha" [(ngModel)]="userLogin.password">
+            </ion-input>
+
+            <button (click)="ExibirOcultar()" ion-button item-right>
+
+              <ion-icon [name]="tipo ? 'ios-eye-off' : 'eye'"></ion-icon>
+            </button>
+
+          </ion-item>
+
+          <ion-button class="btn-entrar" expand="full" color="secondary" (click)="login()" expand="block">
+            Entrar</ion-button>
+          <!-- <div class="btn-cadastrar" (click)="abriregistro()"> <p>Cadastrar</p></div>-->
+
+          <div class="btn-recuperar">
+            <p>Esqueceu sua senha <a>Recuperar</a></p>
+          </div>
+        </ion-list>
+      </ion-slide>
+
+      <!--Aba cadastro-->
+      
+
+    </ion-slides>
+
+  </div>
+</ion-content>

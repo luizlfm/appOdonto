@@ -1,0 +1,25 @@
+<ion-header color="primary">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="getPreviousUrl()"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ getTitle() }}</ion-title>
+    <ion-buttons slot="end"></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="avatarImg">
+    <ion-avatar>
+      <img src="/assets/icon/icon-arquivo.png" />
+    </ion-avatar>
+  </div>
+
+  <ion-grid class="fotos-select">
+    <ion-row>
+      <ion-col size="4"> <img src="/assets/icon/icon-arquivo.png" /> </ion-col>
+      <ion-col size="4"> <img src="/assets/icon/icon-arquivo.png"/></ion-col>
+      <ion-col size="4"> <img src="/assets/icon/icon-arquivo.png"/></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
